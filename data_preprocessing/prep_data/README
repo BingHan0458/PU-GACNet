@@ -1,0 +1,11 @@
+Introduction to the fold prep_data:
+1. generateH5.py
+This is the script to generate the pu1k_poisson_256_poisson_1024_patch5.h5 file
+2. mesh2patch_manual.py
+This script can slice the model interactively to generate surface patches
+3. meshlab_converter.py
+This script can convert the format of the 3D model, such as .off->.stl, .off->.xyz, .stl->.xyz, etc.
+4. MeshSegmentation
+This is C++ code, used for automatic slicing of the model to generate surface patch
+5. poisson_disk_sampling.py
+The function of this script is to perform poisson disk sampling on 3D Mesh and generate any number of point cloud files

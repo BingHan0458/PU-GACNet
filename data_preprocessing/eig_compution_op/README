@@ -1,0 +1,5 @@
+First, compile the c++ and cuda code for data preprocess using commands
+    cd eig_compution_op
+    sh cmake.sh
+    cd ..
+* You may need [PCL](http://www.pointclouds.org/) to compile.
