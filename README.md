@@ -15,7 +15,7 @@ You can check the `env_install.sh` for details how to install the environment. I
 1. Clone the repository:
 
    ```shell
-   https://github.com/...
+   https://github.com/BingHan0458/PU-GACNet
    cd PU-GAC
    ```
    
