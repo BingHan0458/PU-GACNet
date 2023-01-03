@@ -1,4 +1,5 @@
 # PU-GACNet: Graph Attention Convolution Network for Point Cloud Upsampling
+
 This is the official implementation for paper [PU-GACNet: Graph Attention Convolution Network for Point Cloud Upsampling](https://doi.org/10.1016/j.imavis.2021.104371)
 
 Previous methods including [PU-Net](https://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_PU-Net_Point_Cloud_CVPR_2018_paper.pdf), [MPU (3PU)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Yifan_Patch-Based_Progressive_3D_Point_Set_Upsampling_CVPR_2019_paper.pdf), [PU-GAN](https://openaccess.thecvf.com/content_ICCV_2019/papers/Li_PU-GAN_A_Point_Cloud_Upsampling_Adversarial_Network_ICCV_2019_paper.pdf), [Dis-PU](https://openaccess.thecvf.com/content/CVPR2021/papers/Li_Point_Cloud_Upsampling_via_Disentangled_Refinement_CVPR_2021_paper.pdf), [PU-GCN](https://openaccess.thecvf.com/content/CVPR2021/papers/Qian_PU-GCN_Point_Cloud_Upsampling_Using_Graph_Convolutional_Networks_CVPR_2021_paper.pdf) and the repositories of [PU-GCN]([https://openaccess.thecvf.com/content/CVPR2021/papers/Qian_PU-GCN_Point_Cloud_Upsampling_Using_Graph_Convolutional_Networks_CVPR_2021_paper.pdf](https://github.com/guochengqian/PU-GCN)) support training our PU-GACNet. Please kindly cite all of the methods. 
@@ -19,7 +20,7 @@ You can check the `env_install.sh` for details how to install the environment. I
    cd PU-GAC
    ```
    
-2. install the environment
+2. Install the environment:
    Once you have modified the path in `compile.sh` and `tf_compile.sh` under `tf_ops`, you can simply install `pugac` environment by:
    
    ```bash
@@ -27,9 +28,9 @@ You can check the `env_install.sh` for details how to install the environment. I
    conda activate pugac
    ```
    
-3. Download PU1K dataset from [Google Drive](https://drive.google.com/drive/folders/1k1AR_oklkupP8Ssw6gOrIve0CmXJaSH3?usp=sharing)  
+3. Download the dataset:
 
-    You need place it into PU-GAC/data/PU1K.
+    You can download PU1K dataset from [Google Drive](https://drive.google.com/drive/folders/1k1AR_oklkupP8Ssw6gOrIve0CmXJaSH3?usp=sharing) and place it into PU-GAC/data/PU1K.
     
     The directory tree of the data file is as follows:
     ```markdown
@@ -49,10 +50,10 @@ You can check the `env_install.sh` for details how to install the environment. I
            |__...
     ```
     
-    Since PU1K benchmark data is used, no data preprocessing operations are required. If you want to use your own data set, 
-    you can refer to `data_preprocessing/prep_data` for data processing.
+    Since PU1K benchmark data is used, no data preprocessing operations are required. If you want to use your own datasets, you can refer to `data_preprocessing/prep_data` for data processing.
     
-4. Train models
+4. Train the models:
+
    -  PU-GACNet
    ```shell
    python main.py --phase train --model pugac --upsampler edge-aware_nodeshuffle --k 20
@@ -68,7 +69,7 @@ You can check the `env_install.sh` for details how to install the environment. I
    python main.py --phase train --model punet --upsampler multi_cnn
    ```
    
-   -  mpu
+   - MPU
    ```shell
    python main.py --phase train --model mpu --upsampler duplicate
    ```
@@ -78,22 +79,23 @@ You can check the `env_install.sh` for details how to install the environment. I
    python main.py --phase train --model pugan --more_up 2
    ```
    
-4. Evaluate models:  
-    Before testing, please copy the corresponding model to the `pretrain `folder. Then run the scripts `test_pu1k_allmodels.sh`.
+5. Evaluate the models:  
+    
+    Before testing, please copy the corresponding model to the `pretrain` folder. Then you can run the scripts `test_pu1k_allmodels.sh`.
     
    ```shell
    source test_pu1k_allmodels.sh # please look this file and `test_pu1k.sh` for details
    ```
 
-5. Test on real-scanned dataset
+6. Test on the real-scanned dataset:
 
-    Before testing, please copy the corresponding model to the `pretrain `folder. Then run the scripts `test_realscan_allmodels.sh`.
+    Before testing, please copy the corresponding model to the `pretrain` folder. Then you can run the scripts `test_realscan_allmodels.sh`.
     
    ```shell
     source test_realscan_allmodels.sh # please look this file and `test_realscan.sh` for details
     ```
 
-6. Visualization. 
+7. Visualization:
 
    You can use meshlab or cloudcompare software for visualization. Furthermore, mayavi is also a good choice.
    
@@ -146,4 +148,3 @@ If PU-GACNet and the repo are useful for your research, please consider citing:
     
 ### Acknowledgement
 ****
-
