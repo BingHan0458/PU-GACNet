@@ -2,7 +2,7 @@
 
 This is the official implementation for paper [PU-GACNet: Graph Attention Convolution Network for Point Cloud Upsampling](https://doi.org/10.1016/j.imavis.2021.104371)
 
-Previous methods including [PU-Net](https://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_PU-Net_Point_Cloud_CVPR_2018_paper.pdf), [MPU (3PU)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Yifan_Patch-Based_Progressive_3D_Point_Set_Upsampling_CVPR_2019_paper.pdf), [PU-GAN](https://openaccess.thecvf.com/content_ICCV_2019/papers/Li_PU-GAN_A_Point_Cloud_Upsampling_Adversarial_Network_ICCV_2019_paper.pdf), [Dis-PU](https://openaccess.thecvf.com/content/CVPR2021/papers/Li_Point_Cloud_Upsampling_via_Disentangled_Refinement_CVPR_2021_paper.pdf), [PU-GCN](https://openaccess.thecvf.com/content/CVPR2021/papers/Qian_PU-GCN_Point_Cloud_Upsampling_Using_Graph_Convolutional_Networks_CVPR_2021_paper.pdf) and the repositories of [PU-GCN]([https://openaccess.thecvf.com/content/CVPR2021/papers/Qian_PU-GCN_Point_Cloud_Upsampling_Using_Graph_Convolutional_Networks_CVPR_2021_paper.pdf](https://github.com/guochengqian/PU-GCN)) support training our PU-GACNet. Please kindly cite all of the methods. 
+Previous methods including [PU-Net](https://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_PU-Net_Point_Cloud_CVPR_2018_paper.pdf), [MPU (3PU)](https://openaccess.thecvf.com/content_CVPR_2019/papers/Yifan_Patch-Based_Progressive_3D_Point_Set_Upsampling_CVPR_2019_paper.pdf), [PU-GAN](https://openaccess.thecvf.com/content_ICCV_2019/papers/Li_PU-GAN_A_Point_Cloud_Upsampling_Adversarial_Network_ICCV_2019_paper.pdf), [Dis-PU](https://openaccess.thecvf.com/content/CVPR2021/papers/Li_Point_Cloud_Upsampling_via_Disentangled_Refinement_CVPR_2021_paper.pdf), [PU-GCN](https://openaccess.thecvf.com/content/CVPR2021/papers/Qian_PU-GCN_Point_Cloud_Upsampling_Using_Graph_Convolutional_Networks_CVPR_2021_paper.pdf) and the repositories of [PU-GCN](https://github.com/guochengqian/PU-GCN) support training our PU-GACNet. Please kindly cite all of the methods. 
 
  
 ### Installation
@@ -21,6 +21,7 @@ You can check the `env_install.sh` for details how to install the environment. I
    ```
    
 2. Install the environment:
+
    Once you have modified the path in `compile.sh` and `tf_compile.sh` under `tf_ops`, you can simply install `pugac` environment by:
    
    ```bash
@@ -145,6 +146,5 @@ If PU-GACNet and the repo are useful for your research, please consider citing:
 	}
 
 
-    
 ### Acknowledgement
 ****
